@@ -1,0 +1,17 @@
+body {
+    font-family: Arial;
+    margin: 30px;
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li {
+    margin: 10px;
+}
+
+button {
+    margin-left: 10px;
+}

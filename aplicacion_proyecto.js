@@ -71,7 +71,6 @@ function registroSignosVitales(
     let resultadoRespiracion = evaluarSigno(5, respiracion);
 
     // Mostrar el reporte
-    console.log("--- GERISOFT ---");
     console.log("REGISTRO DE SIGNOS VITALES");
     console.log(`Residente: ${nombre}`);
     console.log(`Presion arterial: ${sistolica}/${diastolica} mmHg - ${resultadoPresion}`);
@@ -79,15 +78,59 @@ function registroSignosVitales(
     console.log(`Temperatura: ${temperatura} °C - ${resultadoTemperatura}`);
     console.log(`Saturacion de oxigeno: ${saturacion}% - ${resultadoSaturacion}`);
     console.log(`Frecuencia respiratoria: ${respiracion} rpm - ${resultadoRespiracion}`);
-    console.log("------------");
+    
 }
 
 
+ //Para pedir los datos
+
+let nombre = prompt("Ingrese el nombre del residente:");
+
+let sistolica = Number(prompt("Ingrese la presion sistolica:"));
+let diastolica = Number(prompt("Ingrese la presion diastolica:"));
+
+let frecuencia = Number(prompt("Ingrese la frecuencia cardiaca:"));
+
+let temperatura = Number(prompt("Ingrese la temperatura:"));
+
+let saturacion = Number(prompt("Ingrese la saturacion de oxigeno:"));
+
+let respiracion = Number(prompt("Ingrese la frecuencia respiratoria:"));
+
+// Registrar los signos vitales
+
 registroSignosVitales(
-    "Dayana Bautista",
-    90, 50,
-    80,
-    37.5,
-    98,
-    16
+    nombre,
+    sistolica,
+    diastolica,
+    frecuencia,
+    temperatura,
+    saturacion,
+    respiracion
 );
+
+/*APP SALARIO
+
+const VALOR_HORA_EXTRA = 9000;
+const LIMITE_SALARIO_ALTO = 2000000;
+
+function calcularSalario(salarioBase, horasExtras) {
+    return salarioBase + horasExtras * VALOR_HORA_EXTRA;
+}
+
+function estimarSalario(salarioTotal) {
+    if (salarioTotal >= LIMITE_SALARIO_ALTO) {
+        return "Salario alto";
+    } else {
+        return "Menor a 2 millones";
+    }
+}
+
+// Pedimos los datos al usuario
+const salarioBase = Number(prompt("Escribe el salario base:"));
+const horasExtras = Number(prompt("Escribe las horas extras:"));
+
+const salarioTotal = calcularSalario(salarioBase, horasExtras);
+
+console.log("Salario total: $" + salarioTotal);
+console.log(estimarSalario(salarioTotal));*/
